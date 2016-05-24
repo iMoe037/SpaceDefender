@@ -10,25 +10,25 @@ function preload() {
     game.load.image('cursor', 'assets/sprites/enemy-bullet.png');
 }
 
-var ship;
-var starfield;
-var cursors;
-var scoreString;
-var scoreText;
-var score = 0;
-var scoreString = '';
-var scoreText;
-var stateText;
-var explosions;
-var line;
-var mouseBody;
-var mouseSpring;
-var drawLine = false;
-var invaders;
+//Don't pollute the global namespace
+(function variables () {
+    var ship;
+    var starfield;
+    var cursors;
+    var scoreText;
+    var score = 0;
+    var scoreString = '';
+    var stateText;
+    var explosions;
+    var line;
+    var mouseBody;
+    var mouseSpring;
+    var drawLine = false;
+    var invaders; 
+})();
+
 
 function create() {
-
-    console.log('Space Defender');
 
     game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
     //  Enable P2
